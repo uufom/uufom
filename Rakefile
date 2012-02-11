@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Uufom::Application.load_tasks
+UUFOM::Application.load_tasks

@@ -1,4 +1,4 @@
-Uufom::Application.routes.draw do
+UUFOM::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
