@@ -12,3 +12,7 @@ group :assets do
   gem "therubyracer", "~> 0.9.9"
   gem "uglifier",     "~> 1.2.3"
 end
+
+group :development do
+  gem "foreman", "~> 0.39.0"
+end
