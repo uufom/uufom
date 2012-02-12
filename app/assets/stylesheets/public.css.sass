@@ -1,0 +1,168 @@
+$text-color: #d7dcd6
+$link-color: #86b5ad
+$primary-background-color: #45574d
+$secondary-background-color: #2f4c5a
+
+body
+  background: url("../assets/background.png") repeat fixed
+  color: $text-color
+  font-size: 1.5em
+
+.container
+  color: $text-color
+
+  a
+    font-weight: bold
+    color: $link-color
+    &:hover
+      color: $link-color
+    &:visited
+      color: $link-color
+
+  h1, h2, h3, h4, h5, h6
+    color: $text-color
+
+  blockquote, blockquote p
+    color: $text-color
+
+.left-justified
+  text-align: left
+
+.right-justified
+  text-align: right
+
+.centered
+  text-align: center
+
+.shadowed
+  -moz-box-shadow: black 0px 0px 10px 0
+  -webkit-box-shadow: black 0px 0px 10px 0
+  -o-box-shadow: black 0px 0px 10px 0
+  box-shadow: black 0px 0px 10px 0
+  width: 100%
+  max-width: 1020px
+  min-width: 767px
+  margin: 0 auto
+  margin-bottom: 20px
+  padding: 0
+
+.hidden
+  display: none
+
+.header
+  -moz-border-top-left-radius: 5px
+  -webkit-border-top-left-radius: 5px
+  -o-border-top-left-radius: 5px
+  -ms-border-top-left-radius: 5px
+  -khtml-border-top-left-radius: 5px
+  border-top-left-radius: 5px
+  -moz-border-top-right-radius: 5px
+  -webkit-border-top-right-radius: 5px
+  -o-border-top-right-radius: 5px
+  -ms-border-top-right-radius: 5px
+  -khtml-border-top-right-radius: 5px
+  border-top-right-radius: 5px
+  background: $text-color
+  color: $secondary-background-color
+  padding: 10px 20px 0px 20px
+  margin: 0
+
+  h1
+    font-family: Palatino
+    font-size: 1.75em
+    color: $secondary-background-color
+
+  a
+    color: $secondary-background-color
+    &:hover, &:visited
+      color: $secondary-background-color
+
+.navigation
+  -moz-border-bottom-left-radius: 5px
+  -webkit-border-bottom-left-radius: 5px
+  -o-border-bottom-left-radius: 5px
+  -ms-border-bottom-left-radius: 5px
+  -khtml-border-bottom-left-radius: 5px
+  border-bottom-left-radius: 5px
+  -moz-border-bottom-right-radius: 5px
+  -webkit-border-bottom-right-radius: 5px
+  -o-border-bottom-right-radius: 5px
+  -ms-border-bottom-right-radius: 5px
+  -khtml-border-bottom-right-radius: 5px
+  border-bottom-right-radius: 5px
+  font-size: 1.1em
+  height: 2.25em
+  background: $secondary-background-color
+  color: $text-color
+  vertical-align: middle
+  padding: 10px 20px 0px 20px
+  text-align: center
+  margin: 0
+  font-weight: bold
+
+  .columns
+    padding-top: 4px
+    padding-bottom: 6px
+
+  .columns.active
+    background: $text-color
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    -o-border-radius: 5px
+    -ms-border-radius: 5px
+    -khtml-border-radius: 5px
+    border-radius: 5px
+
+    a, a:visited
+      color: $secondary-background-color
+      &:hover
+        color: $secondary-background-color
+
+  a, a:visited
+    color: $text-color
+    &:hover
+      color: $link-color
+
+.wrapper
+  padding-top: 20px
+  padding-bottom: 20px
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+  -o-border-radius: 10px
+  -ms-border-radius: 10px
+  -khtml-border-radius: 10px
+  border-radius: 10px
+  -moz-box-shadow: black 0px 0px 10px 0
+  -webkit-box-shadow: black 0px 0px 10px 0
+  -o-box-shadow: black 0px 0px 10px 0
+  box-shadow: black 0px 0px 10px 0
+  background: $primary-background-color
+  width: 100%
+  max-width: 980px
+  min-width: 727px
+  margin: 0 auto
+  margin-bottom: 20px
+
+.footer
+  text-align: center
+  color: $text-color
+  .row
+    margin-bottom: 20px
+
+.nice.tabs.vertical dd
+  a
+    background: $text-color
+    &.active
+      color: $text-color
+      background: $secondary-background-color
+
+.custom.button
+  background-color: $secondary-background-color
+  &:hover, &:focus
+    background-color: $text-color
+
+.nice.custom.button
+  color: $text-color
+  border: 1px solid $secondary-background-color
+  &:hover, &:focus
+    color: $secondary-background-color
