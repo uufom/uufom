@@ -1,0 +1,20 @@
+common: &common
+  adapter: postgresql
+  username: username
+  password: password
+
+test:
+  <<: *common
+  database: uufom_test
+
+development:
+  <<: *common
+  database: uufom_development
+
+staging:
+  <<: *common
+  database: uufom_staging
+
+production:
+  <<: *common
+  database: uufom_production
