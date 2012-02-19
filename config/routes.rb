@@ -4,4 +4,6 @@ UUFOM::Application.routes.draw do
   get "public/index"
 
   root :to => 'public#index'
+
+  resources :admin, :only => [:index]
 end
