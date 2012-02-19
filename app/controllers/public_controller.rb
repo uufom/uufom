@@ -7,5 +7,6 @@ class PublicController < ApplicationController
     fresh_when last_modified: 1.day.ago, public: true
 
     @upcoming_service = UpcomingService.next
+    @events = Event.upcoming
   end
 end

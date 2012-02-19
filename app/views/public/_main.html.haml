@@ -30,10 +30,18 @@
         truth and meaning in their lives. We welcome everyone to visit and
         experience our community of love and belief.
     .links
-      = link_to "Next Sunday's Topic", "#", class: "nice large custom button", "data-reveal-id" => "upcoming-service-modal"
+      = link_to "Next Sunday's Topic", "#", class: "nice large custom button", "data-reveal-id" => "next-sunday-modal"
       = link_to "Current Newsletter", "#", class: "nice large custom button"
-      = link_to "Upcoming Events", "#", class: "nice large custom button"
-      #upcoming-service-modal.reveal-modal
-        %h2= @upcoming_service.date
+      = link_to "Upcoming Events", "#", class: "nice large custom button", "data-reveal-id" => "upcoming-events-modal"
+      #next-sunday-modal.reveal-modal
+        %h1= @upcoming_service.date
         :markdown
           #{@upcoming_service.description}
+      #upcoming-events-modal.reveal-modal
+        %h1 Upcoming Events
+        - @events.each do |event|
+          .event
+            %h2= event.name
+            %h3= "#{event.date} (#{event.time})"
+            :markdown
+              #{event.description}
