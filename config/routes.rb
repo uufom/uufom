@@ -8,4 +8,5 @@ UUFOM::Application.routes.draw do
   resources :admin, :only => [:index]
 
   resources :upcoming_services, :only => [:create, :update, :destroy]
+  resources :events, :only => [:create, :update, :destroy]
 end

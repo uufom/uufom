@@ -3,6 +3,7 @@
     .twelve.columns
       %p= "Logged in as: #{current_user.email}"
 
+.container.wrapper
   .row
     .four.columns
       %h3 Add an Upcoming Service Description
@@ -20,11 +21,37 @@
           - @upcoming_services.each do |upcoming_service|
             %tr
               = simple_form_for upcoming_service do |f|
-                %td
-                  = f.input :date, label: false
-                %td
-                  = f.input :description, label: false
-                %td
-                  = f.submit "Update"
-                %td
-                  = link_to "Delete", upcoming_service, method: :delete
+                %td= f.input :date, label: false
+                %td= f.input :description, label: false
+                %td= f.submit "Update"
+                %td= link_to "Delete", upcoming_service, method: :delete
+
+.container.wrapper
+  .row
+    .twelve.columns
+      %h3 Upcoming Events
+      %table
+        %thead
+          %td Date
+          %td Time
+          %td Name
+          %td(colspan="3") Description
+        %tbody
+          - @events.each do |event|
+            %tr
+              = simple_form_for event do |f|
+                %td= f.input :date, label: false
+                %td= f.input :time, label: false
+                %td= f.input :name, label: false
+                %td= f.input :description, label: false
+                %td= f.submit "Update"
+                %td= link_to "Delete", event, method: :delete
+  .row
+    .twelve.columns
+      %h3 Add an Event
+      = simple_form_for @event do |f|
+        = f.input :date, label: "Date of event"
+        = f.input :time, label: "Time of event"
+        = f.input :name, label: "Name of event"
+        = f.input :description, label: "Description of event"
+        = f.submit "Save"

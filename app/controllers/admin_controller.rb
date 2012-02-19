@@ -4,5 +4,8 @@ class AdminController < ApplicationController
   def index
     @upcoming_services = UpcomingService.where("date >= ?", Date.today)
     @upcoming_service = UpcomingService.new
+
+    @events = Event.upcoming
+    @event = Event.new
   end
 end
