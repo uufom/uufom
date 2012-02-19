@@ -5,26 +5,30 @@
 
 .container.wrapper
   .row
-    .four.columns
-      %h3 Add an Upcoming Service Description
-      = simple_form_for @upcoming_service do |f|
-        = f.input :date, label: "Date of the service"
-        = f.input :description, label: "Description of the service"
-        = f.submit "Save"
-    .eight.columns
+    .twelve.columns
       %h3 Upcoming Services
       %table
         %thead
           %td Date
+          %td Title
           %td(colspan="3") Description
         %tbody
           - @upcoming_services.each do |upcoming_service|
             %tr
               = simple_form_for upcoming_service do |f|
                 %td= f.input :date, label: false
+                %td= f.input :title, label: false
                 %td= f.input :description, label: false
                 %td= f.submit "Update"
                 %td= link_to "Delete", upcoming_service, method: :delete
+  .row
+    .twelve.columns
+      %h3 Add an Upcoming Service Description
+      = simple_form_for @upcoming_service do |f|
+        = f.input :date, label: "Date of the service"
+        = f.input :title, label: "Title of the service"
+        = f.input :description, label: "Description of the service"
+        = f.submit "Save"
 
 .container.wrapper
   .row

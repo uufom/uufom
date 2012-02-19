@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120219204948) do
+ActiveRecord::Schema.define(:version => 20120219213018) do
 
   create_table "events", :force => true do |t|
     t.date     "date",        :null => false
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20120219204948) do
     t.text     "description", :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "title"
   end
 
   add_index "upcoming_services", ["date"], :name => "index_upcoming_services_on_date", :unique => true

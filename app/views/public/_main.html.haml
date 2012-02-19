@@ -34,7 +34,9 @@
       = link_to "Current Newsletter", "#", class: "nice large custom button"
       = link_to "Upcoming Events", "#", class: "nice large custom button", "data-reveal-id" => "upcoming-events-modal"
       #next-sunday-modal.reveal-modal
-        %h1= @upcoming_service.date
+        %h1 Next Sunday's Topic
+        %h2= @upcoming_service.title
+        %h3= @upcoming_service.date
         :markdown
           #{@upcoming_service.description}
       #upcoming-events-modal.reveal-modal
