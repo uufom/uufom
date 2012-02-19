@@ -5,5 +5,7 @@ class PublicController < ApplicationController
   def index
     expires_in 1.day, public: true
     fresh_when last_modified: 1.day.ago, public: true
+
+    @upcoming_service = UpcomingService.next
   end
 end
