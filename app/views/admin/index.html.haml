@@ -1,1 +1,30 @@
-%h1= "Welcome #{current_user.email}"
+.container.wrapper
+  .row
+    .twelve.columns
+      %p= "Logged in as: #{current_user.email}"
+
+  .row
+    .four.columns
+      %h3 Add an Upcoming Service Description
+      = simple_form_for @upcoming_service do |f|
+        = f.input :date, label: "Date of the service"
+        = f.input :description, label: "Description of the service"
+        = f.submit "Save"
+    .eight.columns
+      %h3 Upcoming Services
+      %table
+        %thead
+          %td Date
+          %td(colspan="3") Description
+        %tbody
+          - @upcoming_services.each do |upcoming_service|
+            %tr
+              = simple_form_for upcoming_service do |f|
+                %td
+                  = f.input :date, label: false
+                %td
+                  = f.input :description, label: false
+                %td
+                  = f.submit "Update"
+                %td
+                  = link_to "Delete", upcoming_service, method: :delete

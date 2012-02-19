@@ -6,4 +6,6 @@ UUFOM::Application.routes.draw do
   root :to => 'public#index'
 
   resources :admin, :only => [:index]
+
+  resources :upcoming_services, :only => [:create, :update, :destroy]
 end
