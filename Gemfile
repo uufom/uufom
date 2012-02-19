@@ -7,6 +7,7 @@ gem "unicorn",      "~> 4.2.0"
 gem "haml",         "~> 3.1.4"
 gem "redcarpet",    "~> 2.1.0"
 gem "dalli",        "~> 1.1.4"
+gem "devise",       "~> 2.0.4"
 
 group :assets do
   gem "sass-rails",   "~> 3.2.4"
