@@ -36,7 +36,7 @@
       #next-sunday-modal.reveal-modal
         %h1 Next Sunday's Topic
         %h2= @upcoming_service.title
-        %h3= @upcoming_service.date
+        %h3= @upcoming_service.date.strftime("%A, %B %d, %Y")
         :markdown
           #{@upcoming_service.description}
       #upcoming-events-modal.reveal-modal
@@ -44,6 +44,6 @@
         - @events.each do |event|
           .event
             %h2= event.name
-            %h3= "#{event.date} (#{event.time})"
+            %h3= "#{event.date.strftime("%A, %B %d, %Y")} (#{event.time})"
             :markdown
               #{event.description}
