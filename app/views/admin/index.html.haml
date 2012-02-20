@@ -1,3 +1,20 @@
+#add-event.reveal-modal
+  %h1 Add an Event
+  = simple_form_for @event do |f|
+    = f.input :date, label: "Date of event"
+    = f.input :time, label: "Time of event"
+    = f.input :name, label: "Name of event"
+    = f.input :description, label: "Description of event"
+    = f.submit "Save"
+
+#add-service.reveal-modal
+  %h1 Add an Upcoming Service Description
+  = simple_form_for @upcoming_service do |f|
+    = f.input :date, label: "Date of the service"
+    = f.input :title, label: "Title of the service"
+    = f.input :description, label: "Description of the service"
+    = f.submit "Save"
+
 .container.wrapper
   .row
     .twelve.columns
@@ -18,25 +35,18 @@
       %table
         %thead
           %td Date
-          %td Title
-          %td(colspan="3") Description
+          %td(colspan="3") Title/Description
         %tbody
           - @upcoming_services.each do |upcoming_service|
             %tr
               = simple_form_for upcoming_service do |f|
                 %td= f.input :date, label: false
-                %td= f.input :title, label: false
-                %td= f.input :description, label: false
+                %td
+                  = f.input :title, label: false
+                  = f.input :description, label: false
                 %td= f.submit "Update"
                 %td= link_to "Delete", upcoming_service, method: :delete
-  .row
-    .twelve.columns
-      %h3 Add an Upcoming Service Description
-      = simple_form_for @upcoming_service do |f|
-        = f.input :date, label: "Date of the service"
-        = f.input :title, label: "Title of the service"
-        = f.input :description, label: "Description of the service"
-        = f.submit "Save"
+      = link_to "Add New Service", "#", class: "nice large custom button", "data-reveal-id" => "add-service"
 
 .container.wrapper
   .row
@@ -44,26 +54,18 @@
       %h3 Upcoming Events
       %table
         %thead
-          %td Date
-          %td Time
-          %td Name
-          %td(colspan="3") Description
+          %td Date/Time
+          %td(colspan="3") Title/Description
         %tbody
           - @events.each do |event|
             %tr
               = simple_form_for event do |f|
-                %td= f.input :date, label: false
-                %td= f.input :time, label: false
-                %td= f.input :name, label: false
-                %td= f.input :description, label: false
+                %td
+                  = f.input :date, label: false
+                  = f.input :time, label: false
+                %td
+                  = f.input :name, label: false
+                  = f.input :description, label: false
                 %td= f.submit "Update"
                 %td= link_to "Delete", event, method: :delete
-  .row
-    .twelve.columns
-      %h3 Add an Event
-      = simple_form_for @event do |f|
-        = f.input :date, label: "Date of event"
-        = f.input :time, label: "Time of event"
-        = f.input :name, label: "Name of event"
-        = f.input :description, label: "Description of event"
-        = f.submit "Save"
+      = link_to "Add New Event", "#", class: "nice large custom button", "data-reveal-id" => "add-event"
