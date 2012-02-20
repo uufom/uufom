@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120219213018) do
+ActiveRecord::Schema.define(:version => 20120220004608) do
 
   create_table "events", :force => true do |t|
     t.date     "date",        :null => false
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(:version => 20120219213018) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "newsletters", :force => true do |t|
+    t.string   "filename",     :null => false
+    t.string   "content_type", :null => false
+    t.binary   "data",         :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "upcoming_services", :force => true do |t|
