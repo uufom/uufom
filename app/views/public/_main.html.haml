@@ -35,10 +35,11 @@
       = link_to "Upcoming Events", "#", class: "nice large custom button", "data-reveal-id" => "upcoming-events-modal"
 #next-sunday-modal.reveal-modal.centered
   %h1 Next Sunday's Topic
-  %h2= @upcoming_service.title
-  %h3= @upcoming_service.date.strftime("%A, %B %d, %Y")
-  :markdown
-    #{@upcoming_service.description}
+  - if @upcoming_service.present?
+    %h2= @upcoming_service.title
+    %h3= @upcoming_service.date.strftime("%A, %B %d, %Y")
+    :markdown
+      #{@upcoming_service.description}
 #upcoming-events-modal.reveal-modal.centered
   %h1 Upcoming Events
   - @events.each do |event|
