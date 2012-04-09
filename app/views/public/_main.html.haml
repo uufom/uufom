@@ -1,5 +1,9 @@
 .row
   .twelve.columns
+    %p.links
+      = link_to "Next Sunday's Topic", "#", class: "nice large custom button", "data-reveal-id" => "next-sunday-modal"
+      = link_to "Current Newsletter", newsletters_path, class: "nice large custom button"
+      = link_to "Upcoming Events", "#", class: "nice large custom button", "data-reveal-id" => "upcoming-events-modal"
     #featured
       %img(src="assets/logo-creedo.jpg" alt="uufom")
       %img(src="assets/gather.jpg" alt="Gather With Us" data-caption="#gather-caption")
@@ -29,10 +33,6 @@
         Unitarian Universalist congregations welcome everyone seeking
         truth and meaning in their lives. We welcome everyone to visit and
         experience our community of love and belief.
-    .links
-      = link_to "Next Sunday's Topic", "#", class: "nice large custom button", "data-reveal-id" => "next-sunday-modal"
-      = link_to "Current Newsletter", newsletters_path, class: "nice large custom button"
-      = link_to "Upcoming Events", "#", class: "nice large custom button", "data-reveal-id" => "upcoming-events-modal"
 #next-sunday-modal.reveal-modal.centered
   %h1 Next Sunday's Topic
   - if @upcoming_service.present?
