@@ -11,4 +11,5 @@ UUFOM::Application.routes.draw do
   resources :events, :only => [:create, :update, :destroy]
   resources :newsletters, :only => [:index, :create]
   resources :social_justice_newsletters, :only => [:index, :create]
+  resources :calendars, :only => [:index, :create, :update]
 end

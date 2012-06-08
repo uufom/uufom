@@ -7,5 +7,7 @@ class AdminController < ApplicationController
 
     @events = Event.upcoming
     @event = Event.new
+
+    @calendar = Calendar.first || Calendar.new
   end
 end

@@ -77,3 +77,11 @@
                 %td= f.submit "Update"
                 %td= link_to "Delete", event, method: :delete
       = link_to "Add New Event", "#", class: "nice large custom button", "data-reveal-id" => "add-event"
+
+.container.wrapper
+  .row
+    .twelve.columns
+      %h3 Update Calendar
+      = simple_form_for @calendar do |f|
+        = f.input :data, label: "Paste embedding code here"
+        = f.submit "Save"
