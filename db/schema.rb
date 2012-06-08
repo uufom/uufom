@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120608135924) do
+ActiveRecord::Schema.define(:version => 20120608142404) do
 
   create_table "calendars", :force => true do |t|
-    t.string   "data",       :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "data",       :limit => 255, :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "events", :force => true do |t|
