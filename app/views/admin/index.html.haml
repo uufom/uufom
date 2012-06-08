@@ -31,6 +31,14 @@
 .container.wrapper
   .row
     .twelve.columns
+      %h3 Upload Social Justice News
+      = form_tag social_justice_newsletters_path, multipart: true do
+        = file_field_tag "newsletter"
+        = submit_tag "Upload"
+
+.container.wrapper
+  .row
+    .twelve.columns
       %h3 Upcoming Services
       %table
         %thead

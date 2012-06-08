@@ -8,6 +8,7 @@ UUFOM::Application.routes.draw do
   resources :admin, :only => [:index]
 
   resources :upcoming_services, :only => [:create, :update, :destroy]
-  resources :newsletters, :only => [:index, :create]
   resources :events, :only => [:create, :update, :destroy]
+  resources :newsletters, :only => [:index, :create]
+  resources :social_justice_newsletters, :only => [:index, :create]
 end
