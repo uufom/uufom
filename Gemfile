@@ -1,4 +1,4 @@
-source :rubygems
+source "https://rubygems.org"
 
 gem "rails",        "3.2.11"
 gem "pg",           "~> 0.13.0"
@@ -13,7 +13,7 @@ gem "simple_form",  "~> 2.0.0rc"
 group :assets do
   gem "sass-rails",   "~> 3.2.4"
   gem "coffee-rails", "~> 3.2.2"
-  gem "therubyracer", "~> 0.9.9"
+  gem "therubyracer"
   gem "uglifier",     "~> 1.2.3"
 end
 
