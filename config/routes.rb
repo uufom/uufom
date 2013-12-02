@@ -3,6 +3,8 @@ UUFOM::Application.routes.draw do
 
   get "public/index"
 
+  get "/amazon", :to => redirect("http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=uufom-20")
+
   root :to => 'public#index'
 
   resources :admin, :only => [:index]
